@@ -26,3 +26,8 @@ build/
 dist/
 .DS_Store
 node_modules/.cache/
+node_modules/
+build/
+dist/
+.DS_Store
+
