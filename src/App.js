@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppLayout, Box, Header as CloudscapeHeader } from '@cloudscape-design/components';
+import { AppLayout} from '@cloudscape-design/components';
 import '@cloudscape-design/global-styles/index.css';
 import Navigation from './components/SideNavigation';
 import Home from './components/Home';
