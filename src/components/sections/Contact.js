@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useTheme } from '../../context/ThemeContext';
 import { FiMail, FiMapPin, FiGithub, FiLinkedin } from 'react-icons/fi';
-import { SiGooglescholar } from 'react-icons/si';
 
 const Contact = () => {
   const { isDark } = useTheme();
