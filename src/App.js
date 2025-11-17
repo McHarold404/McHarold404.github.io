@@ -1,28 +1,34 @@
 import React from 'react';
-import { AppLayout} from '@cloudscape-design/components';
-import '@cloudscape-design/global-styles/index.css';
-import Navigation from './components/SideNavigation';
-import Home from './components/Home';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import About from './components/About';
-import Contact from './components/Contact';
+import { ThemeProvider } from './context/ThemeContext';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Hero from './components/sections/Hero';
+import About from './components/sections/About';
+import Skills from './components/sections/Skills';
+import Experience from './components/sections/Experience';
+import Publications from './components/sections/Publications';
+import Projects from './components/sections/Projects';
+import News from './components/sections/News';
+import Contact from './components/sections/Contact';
 
 function App() {
   return (
-    <AppLayout
-      navigation={<Navigation />}
-      toolsHide={true}
-      content={
-        <div>
-          <Home />
-          <Experience />
-          <Projects />
+    <ThemeProvider>
+      <div className="min-h-screen">
+        <Navbar />
+        <main>
+          <Hero />
           <About />
+          <Skills />
+          <Experience />
+          <Publications />
+          <Projects />
+          <News />
           <Contact />
-        </div>
-      }
-    />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 
