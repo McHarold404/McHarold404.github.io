@@ -1,15 +1,30 @@
 export const publications = [
   {
+    id: 3,
+    title:
+      "CMT-Bench: Cricket Multi-Table Generation Benchmark for Probing Robustness in Large Language Models",
+    authors: "Upadhyay, R., Ahuja, N., Baral, R., Garimella, A., Gupta, V.",
+    venue: "Under Review (EACL 2025)",
+    year: 2025,
+    type: "Conference",
+    abstract:
+      "A comprehensive benchmark for evaluating large language models' ability to generate multi-table structures from cricket-related text.",
+    links: {
+      paper: "https://arxiv.org/abs/2510.18173",
+    },
+    tags: ["Benchmarking", "LLMs", "Table Generation"],
+  },
+  {
     id: 1,
     title: "Map&Make: Schema-Guided Text-to-Table Generation",
     authors: "Ahuja, N., Bardoliya, F., Baral, C., Gupta, V.",
     venue: "ACL 2025",
     year: 2025,
     type: "Conference",
-    abstract: "Transform unstructured text into reliable, auditable tables with a schema-first approach that couples structural planning with rule and time-aware reasoning over long contexts.",
+    abstract:
+      "Transform unstructured text into reliable, auditable tables with a schema-first approach that couples structural planning with rule and time-aware reasoning over long contexts.",
     links: {
-      paper: "#",
-      code: "#",
+      paper: "https://aclanthology.org/2025.acl-long.1460/",
     },
     tags: ["NLP", "Table Generation", "LLMs"],
   },
@@ -20,63 +35,56 @@ export const publications = [
     venue: "AACL Demo Track 2025",
     year: 2025,
     type: "Demo",
-    abstract: "Real-time sports question answering system using natural language to SQL conversion over dynamic sports data.",
+    abstract:
+      "Real-time sports question answering system using natural language to SQL conversion over dynamic sports data.",
     links: {
-      paper: "#",
-      demo: "#",
+      paper: "https://arxiv.org/abs/2508.17157",
     },
     tags: ["NL2SQL", "QA Systems", "Sports Analytics"],
   },
   {
-    id: 3,
-    title: "CMT-Bench: Cricket Multi-Table Generation Benchmark for Probing Robustness in Large Language Models",
-    authors: "Upadhyay, R., Ahuja, N., Baral, R., Garimella, A., Gupta, V.",
-    venue: "Under Review (EACL 2025)",
-    year: 2025,
-    type: "Conference",
-    abstract: "A comprehensive benchmark for evaluating large language models' ability to generate multi-table structures from cricket-related text.",
-    links: {
-      paper: "#",
-    },
-    tags: ["Benchmarking", "LLMs", "Table Generation"],
-  },
-  {
     id: 4,
     title: "HashSet: A Dataset for Hashtag Segmentation",
-    authors: "Kodali, P., Bhatnagar, A., Ahuja, N., Shrivastava, M., Kumaraguru, P.",
+    authors:
+      "Kodali, P., Bhatnagar, A., Ahuja, N., Shrivastava, M., Kumaraguru, P.",
     venue: "LREC 2022",
     year: 2022,
     type: "Conference",
-    abstract: "A comprehensive dataset for hashtag segmentation tasks in social media text processing.",
+    abstract:
+      "A comprehensive dataset for hashtag segmentation tasks in social media text processing.",
     links: {
-      paper: "#",
-      dataset: "#",
+      paper: "https://aclanthology.org/2022.lrec-1.782/",
     },
     tags: ["NLP", "Social Media", "Dataset"],
   },
   {
     id: 5,
     title: "Estimating Code-Mix Quality via LM Embeddings",
-    authors: "Kodali, P., Sachan, T., Goindani, A., Goel, A., Ahuja, N., Shrivastava, M., Kumaraguru, P.",
+    authors:
+      "Kodali, P., Sachan, T., Goindani, A., Goel, A., Ahuja, N., Shrivastava, M., Kumaraguru, P.",
     venue: "INLG 2022 (Generation Challenges Workshop)",
     year: 2022,
     type: "Workshop",
-    abstract: "Novel approach to evaluate the quality of code-mixed text using language model embeddings.",
+    abstract:
+      "Novel approach to evaluate the quality of code-mixed text using language model embeddings.",
     links: {
-      paper: "#",
+      paper: "https://aclanthology.org/2022.inlg-genchal.4/",
     },
     tags: ["Code-Mixing", "NLP", "Quality Estimation"],
   },
   {
     id: 6,
-    title: "From Noise to Knowledge: Distill Social Media Opinions on Rumor Detection Exploiting LLMs",
-    authors: "Sharma, S., Goyal, A., Ahuja, N., Pati, B., Sharma, R., Kumaraguru, P.",
+    title:
+      "From Noise to Knowledge: Distill Social Media Opinions on Rumor Detection Exploiting LLMs",
+    authors:
+      "Sharma, S., Goyal, A., Ahuja, N., Pati, B., Sharma, R., Kumaraguru, P.",
     venue: "SSRN Working Paper, 2024",
     year: 2024,
     type: "Working Paper",
-    abstract: "Leveraging large language models to distill knowledge from noisy social media data for improved rumor detection.",
+    abstract:
+      "Leveraging large language models to distill knowledge from noisy social media data for improved rumor detection.",
     links: {
-      paper: "#",
+      paper: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4920757",
     },
     tags: ["Social Media", "Rumor Detection", "LLMs"],
   },

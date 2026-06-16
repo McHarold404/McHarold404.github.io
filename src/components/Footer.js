@@ -7,10 +7,18 @@ const Footer = () => {
   const { isDark } = useTheme();
 
   const socialLinks = [
-    { icon: FiGithub, href: 'https://github.com/McHarold404', label: 'GitHub' },
-    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/naman-ahuja-402166190/', label: 'LinkedIn' },
-    { icon: SiGooglescholar, href: '#', label: 'Google Scholar' },
-    { icon: FiMail, href: 'mailto:nahuja11@asu.edu', label: 'Email' },
+    { icon: FiGithub, href: "https://github.com/McHarold404", label: "GitHub" },
+    {
+      icon: FiLinkedin,
+      href: "https://www.linkedin.com/in/naman-ahuja-402166190/",
+      label: "LinkedIn",
+    },
+    {
+      icon: SiGooglescholar,
+      href: "https://scholar.google.com/citations?user=oSZye74AAAAJ&hl=en",
+      label: "Google Scholar",
+    },
+    { icon: FiMail, href: "mailto:nahuja11@asu.edu", label: "Email" },
   ];
 
   return (

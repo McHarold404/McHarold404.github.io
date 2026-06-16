@@ -56,7 +56,7 @@ function Experience() {
               <p>Ungraduate Research Assistant</p>
               <p>Jan 2022 - April 2023</p>
               <ul>
-                <li>Formalised and developed a novel noise-reduction framework using sentence-transformer LLMs. Buit a rumour-detection model ensembling LSTM and CNN models on top for improved detection of rumours from twitter. Paper under review at Expert Systems with Applications Journal.</li>
+                <li>Formalised and developed a novel noise-reduction framework for sical using sentence-transformer LLMs. Buit a rumour-detection model ensembling LSTM and CNN models on top for improved detection of rumours from twitter. Paper under review at Expert Systems with Applications Journal.</li>
                 <li>Developed an MLP regressor model using m-BERT embeddings to evaluate the quality of synthetic machine-generated code-mixed sentences. Paper accepted at INLG 2022.</li>
                 <li>Built NER models for hashtag segmentation, scraped and processed 3.3M hashtags from Twitter using a loosely supervised approach. Paper accepted at LREC22.</li>
               </ul>
