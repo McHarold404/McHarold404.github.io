@@ -15,7 +15,13 @@ export const news = [
     month: "Apr",
     year: 2026,
     summary:
-      'Received the IBM Infrastructure Master&apos;s Fellowship for AI research, featured by <a href="https://news.asu.edu/20260430-sun-devil-community-computer-science-grad-earns-ibm-fellowship-ai-research" style="text-decoration:underline">ASU News</a>.',
+      '<a href="https://arxiv.org/abs/2604.14165" style="text-decoration:underline">EviSearch: A Human in the Loop System for Extracting and Auditing Clinical Evidence for Systematic Reviews</a>. <a href="https://evisearch-web-488637739109.us-central1.run.app/" style="text-decoration:underline">Try it out</a>.',
+  },
+  {
+    month: "Apr",
+    year: 2026,
+    summary:
+      'Received the <a href="https://research.rice.edu/opd/ibm-masters-fellowship-award" style="text-decoration:underline">IBM Infrastructure Master&apos;s Fellowship</a> for AI research, featured by <a href="https://news.asu.edu/20260430-sun-devil-community-computer-science-grad-earns-ibm-fellowship-ai-research" style="text-decoration:underline">ASU News</a>.',
   },
   {
     month: "Oct",
