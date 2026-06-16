@@ -22,43 +22,46 @@ const News = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          {/* Section Title */}
-          <div className="text-center mb-12">
+          <div className="mb-12">
             <h2
               className={`text-4xl md:text-5xl font-bold mb-4 ${
                 isDark ? "text-dark-text" : "text-light-text"
               }`}
             >
-              Latest{" "}
+              What I&apos;ve{" "}
               <span
                 className={isDark ? "text-dark-primary" : "text-light-primary"}
               >
-                News
+                Been Up To
               </span>
             </h2>
             <div
-              className={`w-20 h-1 mx-auto mb-8 ${
+              className={`w-20 h-1 mb-8 ${
                 isDark ? "bg-dark-primary" : "bg-light-primary"
               }`}
             />
-
-            {/* Removed filter buttons for news. */}
           </div>
 
-          {/* News List */}
-          <div className="flex flex-col items-center gap-4">
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1fr_0.35fr] lg:items-start">
+            <div className="flex flex-col gap-4">
             {visibleNews.map((item, idx) => (
               <div
                 key={idx}
-                className={`w-full max-w-2xl p-4 rounded-lg shadow ${
+                className={`w-full rounded-lg p-5 ${
                   isDark ? "bg-dark-card" : "bg-white"
                 }`}
               >
-                <div className="text-xs font-semibold mb-1 text-gray-500">
+                <div
+                  className={`mb-2 text-xs font-semibold uppercase tracking-[0.18em] ${
+                    isDark ? "text-dark-primary" : "text-light-primary"
+                  }`}
+                >
                   {item.month} {item.year}
                 </div>
                 <div
-                  className="text-base"
+                  className={`text-base leading-relaxed ${
+                    isDark ? "text-dark-text-secondary" : "text-light-text-secondary"
+                  }`}
                   dangerouslySetInnerHTML={{ __html: item.summary }}
                 />
               </div>
@@ -71,10 +74,39 @@ const News = () => {
                     : "border-light-primary text-light-primary"
                 }`}
                 onClick={() => setShowAll((v) => !v)}
-              >
-                {showAll ? "Show Less" : "Show More"}
-              </button>
+            >
+              {showAll ? "Show Less" : "Show More"}
+            </button>
             )}
+            </div>
+
+            <div className={`rounded-lg p-6 ${isDark ? "bg-dark-card" : "bg-white"}`}>
+              <p
+                className={`text-sm font-semibold uppercase tracking-[0.2em] ${
+                  isDark ? "text-dark-primary" : "text-light-primary"
+                }`}
+              >
+                Full profile
+              </p>
+              <p
+                className={`mt-4 text-sm leading-relaxed ${
+                  isDark ? "text-dark-text-secondary" : "text-light-text-secondary"
+                }`}
+              >
+                Work history, publications, skills, and projects live on a separate page
+                now so the homepage stays lighter.
+              </p>
+              <a
+                href="#work"
+                className={`mt-5 inline-flex rounded-lg px-4 py-2 text-sm font-medium ${
+                  isDark
+                    ? "bg-dark-primary text-white hover:bg-dark-primary-light"
+                    : "bg-light-primary text-white hover:bg-light-primary-dark"
+                }`}
+              >
+                View Work
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>

@@ -16,7 +16,7 @@ module.exports = {
           'primary-dark': '#991b1b', // red-800
           'primary-light': '#ef4444', // red-500
           text: '#f5f5f5',
-          'text-secondary': '#a3a3a3',
+          'text-secondary': '#f5f5f5',
         },
         // Light theme - Red & White
         light: {
@@ -27,7 +27,7 @@ module.exports = {
           'primary-dark': '#991b1b', // red-800
           'primary-light': '#ef4444', // red-500
           text: '#1f2937',
-          'text-secondary': '#6b7280',
+          'text-secondary': '#111827',
         }
       },
       fontFamily: {

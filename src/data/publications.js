@@ -2,17 +2,17 @@ export const publications = [
   {
     id: 3,
     title:
-      "CMT-Bench: Cricket Multi-Table Generation Benchmark for Probing Robustness in Large Language Models",
+      "Moneyball with LLMs: Analyzing Tabular Summarization in Sports Narratives",
     authors: "Upadhyay, R., Ahuja, N., Baral, R., Garimella, A., Gupta, V.",
-    venue: "Under Review (EACL 2025)",
-    year: 2025,
+    venue: "ACL 2026",
+    year: 2026,
     type: "Conference",
     abstract:
-      "A comprehensive benchmark for evaluating large language models' ability to generate multi-table structures from cricket-related text.",
+      "A diagnostic benchmark and analysis of long-context tabular summarization in sports narratives, focusing on how LLMs maintain state across evolving, multi-entity data.",
     links: {
       paper: "https://arxiv.org/abs/2510.18173",
     },
-    tags: ["Benchmarking", "LLMs", "Table Generation"],
+    tags: ["Table Summarization", "LLMs", "Sports Analytics"],
   },
   {
     id: 1,
@@ -30,15 +30,16 @@ export const publications = [
   },
   {
     id: 2,
-    title: "SportSQL: Real-Time Sports QA using NL2SQL over Dynamic Data",
-    authors: "Martinez, S., Ahuja, N., Bardoliya, F., Bryan, C., Gupta, V.",
-    venue: "AACL Demo Track 2025",
+    title: "SPORTSQL: An Interactive System for Real-Time Sports Reasoning and Visualization",
+    authors:
+      "Martinez, S., Ahuja, N., Bardoliya, F., Roy Chowdhury, S., Bryan, C., Gupta, V.",
+    venue: "IJCNLP-AACL 2025 Demo Track",
     year: 2025,
     type: "Demo",
     abstract:
-      "Real-time sports question answering system using natural language to SQL conversion over dynamic sports data.",
+      "An interactive sports reasoning and visualization system that translates natural language questions into SQL over live, dynamic sports data.",
     links: {
-      paper: "https://arxiv.org/abs/2508.17157",
+      paper: "https://aclanthology.org/2025.ijcnlp-demo.11/",
     },
     tags: ["NL2SQL", "QA Systems", "Sports Analytics"],
   },

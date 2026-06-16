@@ -1,227 +1,183 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiMail, FiFileText, FiChevronDown } from 'react-icons/fi';
-import { SiGooglescholar } from 'react-icons/si';
-import { useTheme } from '../../context/ThemeContext';
-import { TypeAnimation } from 'react-type-animation';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  FiArrowRight,
+  FiFileText,
+  FiGithub,
+  FiLinkedin,
+  FiMail,
+} from "react-icons/fi";
+import { SiGooglescholar } from "react-icons/si";
+import { useTheme } from "../../context/ThemeContext";
+import { news } from "../../data/news";
 
 const Hero = () => {
   const { isDark } = useTheme();
 
   const socialLinks = [
-    { icon: FiGithub, href: 'https://github.com/McHarold404', label: 'GitHub' },
-    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/naman-ahuja-402166190/', label: 'LinkedIn' },
-    { icon: SiGooglescholar, href: '#', label: 'Google Scholar' },
-    { icon: FiMail, href: 'mailto:nahuja11@asu.edu', label: 'Email' },
+    { icon: FiGithub, href: "https://github.com/McHarold404", label: "GitHub" },
+    {
+      icon: FiLinkedin,
+      href: "https://www.linkedin.com/in/naman-ahuja-402166190/",
+      label: "LinkedIn",
+    },
+    {
+      icon: SiGooglescholar,
+      href: "https://scholar.google.com/citations?user=oSZye74AAAAJ&hl=en",
+      label: "Google Scholar",
+    },
+    { icon: FiMail, href: "mailto:nahuja11@asu.edu", label: "Email" },
   ];
 
   return (
     <section
       id="home"
-      className={`min-h-screen flex items-center justify-center relative overflow-hidden ${
-        isDark ? 'bg-dark-bg' : 'bg-light-bg'
+      className={`relative min-h-screen overflow-visible pt-16 ${
+        isDark ? "bg-dark-bg" : "bg-light-bg"
       }`}
     >
-      {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div
-          className={`absolute inset-0 opacity-20 ${
-            isDark
-              ? 'bg-gradient-to-br from-dark-primary/30 via-transparent to-dark-primary/30'
-              : 'bg-gradient-to-br from-light-primary/20 via-transparent to-light-primary/20'
-          }`}
-        />
-        {/* Animated circles */}
-        <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            rotate: [0, 180, 360],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-          className={`absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl ${
-            isDark ? 'bg-dark-primary/10' : 'bg-light-primary/10'
-          }`}
-        />
-        <motion.div
-          animate={{
-            scale: [1.2, 1, 1.2],
-            rotate: [360, 180, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-          className={`absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-3xl ${
-            isDark ? 'bg-dark-primary/10' : 'bg-light-primary/10'
-          }`}
-        />
-      </div>
+      <div className="absolute inset-x-0 top-0 h-px bg-light-primary/30 dark:bg-dark-primary/30" />
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+      <div className="relative z-10 mx-auto w-full max-w-[1320px] px-5 py-7 sm:px-8 lg:px-10">
+        <motion.h1
+          initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.55 }}
+          className={`mb-8 text-4xl font-bold leading-tight md:text-5xl ${
+            isDark ? "text-dark-text" : "text-light-text"
+          }`}
         >
-          {/* Logo */}
+          Naman Ahuja
+        </motion.h1>
+
+        <div className="grid grid-cols-1 items-start gap-9 lg:grid-cols-[360px_minmax(0,1fr)] lg:gap-12">
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.1, duration: 0.6 }}
-            className="flex justify-center mb-8"
-          >
-            <img 
-              src={isDark ? "/images/logo.png" : "/images/logo-black.png"} 
-              alt="Naman Ahuja" 
-              className="h-24 w-auto md:h-32 transition-opacity duration-300"
-            />
-          </motion.div>
-
-          {/* Greeting */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className={`text-lg md:text-xl mb-4 ${
-              isDark ? 'text-dark-text-secondary' : 'text-light-text-secondary'
-            }`}
-          >
-            Hi, my name is
-          </motion.p>
-
-          {/* Name */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className={`text-5xl md:text-7xl lg:text-8xl font-bold mb-4 ${
-              isDark ? 'text-dark-text' : 'text-light-text'
-            }`}
+            transition={{ duration: 0.55, delay: 0.08 }}
+            className="flex flex-col items-start"
           >
-            Naman <span className={isDark ? 'text-dark-primary' : 'text-light-primary'}>Ahuja</span>
-          </motion.h1>
-
-          {/* Animated Tagline */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className={`text-2xl md:text-4xl lg:text-5xl font-semibold mb-8 h-20 ${
-              isDark ? 'text-dark-text-secondary' : 'text-light-text-secondary'
-            }`}
-          >
-            <TypeAnimation
-              sequence={[
-                'Software Engineer',
-                2000,
-                'ML Researcher',
-                2000,
-                'NLP Enthusiast',
-                2000,
-                'Full-Stack Developer',
-                2000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
-          </motion.div>
-
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.7 }}
-            className={`text-lg md:text-xl max-w-3xl mx-auto mb-12 ${
-              isDark ? 'text-dark-text-secondary' : 'text-light-text-secondary'
-            }`}
-          >
-            MS in Computer Science @ Arizona State University | Specializing in Table Generation, 
-            Semantic Parsing, and Agentic AI
-          </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9 }}
-            className="flex flex-wrap justify-center gap-4 mb-12"
-          >
-            <a
-              href="https://drive.google.com/drive/folders/1DK-_xzOwiza7CPILDWUX4tM97IT4koYF?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`px-8 py-3 rounded-lg font-medium transition-all transform hover:scale-105 flex items-center gap-2 ${
-                isDark
-                  ? 'bg-dark-primary text-white hover:bg-dark-primary-light'
-                  : 'bg-light-primary text-white hover:bg-light-primary-dark'
+            <div
+              className={`relative overflow-hidden rounded-lg border p-3 shadow-xl ${
+                isDark ? "border-dark-card bg-dark-surface" : "border-gray-200 bg-white"
               }`}
             >
-              <FiFileText /> Download CV
-            </a>
-            <a
-              href="#contact"
-              className={`px-8 py-3 rounded-lg font-medium transition-all transform hover:scale-105 border-2 ${
-                isDark
-                  ? 'border-dark-primary text-dark-primary hover:bg-dark-primary hover:text-white'
-                  : 'border-light-primary text-light-primary hover:bg-light-primary hover:text-white'
-              }`}
-            >
-              Get In Touch
-            </a>
-          </motion.div>
+              <img
+                src="/images/hero-profile.png"
+                alt="Naman Ahuja"
+                className="h-[380px] w-[300px] rounded-md object-cover sm:h-[430px] sm:w-[340px]"
+              />
+            </div>
 
-          {/* Social Links */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.1 }}
-            className="flex justify-center gap-6"
-          >
-            {socialLinks.map((social, index) => (
-              <motion.a
-                key={social.label}
-                href={social.href}
+            <div className="mt-5 flex w-full max-w-[366px] flex-wrap gap-3">
+              <a
+                href="https://drive.google.com/drive/folders/1DK-_xzOwiza7CPILDWUX4tM97IT4koYF?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.2, y: -5 }}
-                whileTap={{ scale: 0.9 }}
-                className={`p-3 rounded-lg transition-colors ${
+                className={`flex items-center gap-2 rounded-lg px-5 py-3 text-base font-medium transition-all hover:scale-105 ${
                   isDark
-                    ? 'text-dark-text-secondary hover:text-dark-primary hover:bg-dark-card'
-                    : 'text-light-text-secondary hover:text-light-primary hover:bg-light-surface'
+                    ? "bg-dark-primary text-white hover:bg-dark-primary-light"
+                    : "bg-light-primary text-white hover:bg-light-primary-dark"
                 }`}
-                aria-label={social.label}
               >
-                <social.icon className="w-6 h-6" />
-              </motion.a>
-            ))}
+                <FiFileText /> CV
+              </a>
+              <a
+                href="#work"
+                className={`flex items-center gap-2 rounded-lg border-2 px-5 py-3 text-base font-medium transition-all hover:scale-105 ${
+                  isDark
+                    ? "border-dark-primary text-dark-primary hover:bg-dark-primary hover:text-white"
+                    : "border-light-primary text-light-primary hover:bg-light-primary hover:text-white"
+                }`}
+              >
+                Work <FiArrowRight />
+              </a>
+            </div>
           </motion.div>
-        </motion.div>
-      </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <motion.a
-          href="#about"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className={isDark ? 'text-dark-primary' : 'text-light-primary'}
-        >
-          <FiChevronDown className="w-8 h-8" />
-        </motion.a>
-      </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, delay: 0.14 }}
+            className="max-w-4xl"
+          >
+            <div
+              className={`space-y-4 text-lg leading-relaxed md:text-xl ${
+                isDark ? "text-dark-text-secondary" : "text-light-text-secondary"
+              }`}
+            >
+              <p>
+                I work on information synthesis systems that convert unstructured,
+                long-context documents into structured knowledge through text-to-table
+                generation, semantic parsing, and tabular reasoning.
+              </p>
+              <p>
+                My research focuses on agents that synthesize evidence across text,
+                tables, figures, and domain-specific datasets, with an emphasis on
+                reliability in sports analytics, healthcare data, and other specialized
+                information settings.
+              </p>
+              <p>
+                I recently completed my MS in Computer Science at Arizona State University.
+              </p>
+            </div>
+
+            <div className="mt-6 flex flex-wrap items-center gap-2">
+              {socialLinks.map((social) => (
+                <motion.a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileTap={{ scale: 0.96 }}
+                  className={`rounded-lg p-3 transition-colors ${
+                    isDark
+                      ? "text-dark-text-secondary hover:bg-dark-card hover:text-dark-primary"
+                      : "text-light-text-secondary hover:bg-light-surface hover:text-light-primary"
+                  }`}
+                  aria-label={social.label}
+                >
+                  <social.icon className="h-6 w-6" />
+                </motion.a>
+              ))}
+            </div>
+
+            <div className="mt-10">
+              <h2
+                className={`mb-4 text-2xl font-bold ${
+                  isDark ? "text-dark-text" : "text-light-text"
+                }`}
+              >
+                News
+              </h2>
+
+              <ul className="space-y-3">
+                {news.map((item) => (
+                  <li
+                    key={`${item.month}-${item.year}-${item.summary}`}
+                    className="grid grid-cols-[6rem_1fr] gap-4"
+                  >
+                    <div
+                      className={`text-base font-semibold ${
+                        isDark ? "text-dark-primary" : "text-light-primary"
+                      }`}
+                    >
+                      {item.month} {item.year}
+                    </div>
+                    <div
+                      className={`text-base leading-relaxed md:text-lg ${
+                        isDark ? "text-dark-text-secondary" : "text-light-text-secondary"
+                      }`}
+                      dangerouslySetInnerHTML={{ __html: item.summary }}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        </div>
+      </div>
     </section>
   );
 };

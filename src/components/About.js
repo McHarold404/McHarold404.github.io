@@ -11,7 +11,7 @@ function About() {
           </div>
           <div>
             <Header variant="h2">About <strong>Me</strong></Header>
-            <p>Graduate CS student at Arizona State University</p>
+            <p>Computer science graduate from Arizona State University</p>
             <p>
               I'm Naman Ahuja, a Computer Science graduate from IIIT Hyderabad,
               now embarking on my master's journey at Arizona State University.

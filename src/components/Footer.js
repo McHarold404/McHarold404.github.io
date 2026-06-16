@@ -1,25 +1,9 @@
 import React from 'react';
 import { useTheme } from '../context/ThemeContext';
-import { FiGithub, FiLinkedin, FiMail, FiHeart } from 'react-icons/fi';
-import { SiGooglescholar } from 'react-icons/si';
+import { FiHeart } from 'react-icons/fi';
 
 const Footer = () => {
   const { isDark } = useTheme();
-
-  const socialLinks = [
-    { icon: FiGithub, href: "https://github.com/McHarold404", label: "GitHub" },
-    {
-      icon: FiLinkedin,
-      href: "https://www.linkedin.com/in/naman-ahuja-402166190/",
-      label: "LinkedIn",
-    },
-    {
-      icon: SiGooglescholar,
-      href: "https://scholar.google.com/citations?user=oSZye74AAAAJ&hl=en",
-      label: "Google Scholar",
-    },
-    { icon: FiMail, href: "mailto:nahuja11@asu.edu", label: "Email" },
-  ];
 
   return (
     <footer
@@ -31,30 +15,10 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-center space-y-4">
           {/* Logo */}
           <img 
-            src={isDark ? "/images/logo.png" : "/images/logo-black.png"} 
+            src="/images/image.png" 
             alt="Naman Ahuja" 
-            className="h-12 w-auto opacity-80 transition-opacity duration-300"
+            className="h-12 w-auto rounded-sm opacity-80 transition-opacity duration-300"
           />
-          
-          {/* Social Links */}
-          <div className="flex gap-6">
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`p-2 rounded-lg transition-colors ${
-                  isDark
-                    ? 'text-dark-text-secondary hover:text-dark-primary hover:bg-dark-card'
-                    : 'text-light-text-secondary hover:text-light-primary hover:bg-white'
-                }`}
-                aria-label={social.label}
-              >
-                <social.icon className="w-5 h-5" />
-              </a>
-            ))}
-          </div>
 
           {/* Copyright */}
           <div
